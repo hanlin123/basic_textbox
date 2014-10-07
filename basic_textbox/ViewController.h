@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *tempInput;
 @property (strong, nonatomic) IBOutlet UILabel *resultOutput;
 - (IBAction)convertTemp:(id)sender;
-
+- (IBAction)hideKeyBoard:(id)sender;
+- (IBAction)clearTextField:(id)sender;
 @end
 

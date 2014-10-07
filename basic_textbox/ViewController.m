@@ -32,4 +32,26 @@
     
     _resultOutput.text = resultStr;
 }
+
+- (IBAction)hideKeyBoard:(id)sender {
+    // text input resign the first responder to vanquish keyboard
+    [sender resignFirstResponder];
+}
+
+- (IBAction)clearTextField:(id)sender {
+    _tempInput.text = @"";
+}
+
+- (void)touchesBegan:(NSSet *)touches
+           withEvent:(UIEvent *)event {
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([_tempInput isFirstResponder] && [touch view]!=_tempInput) {
+        // the keyboard remains on the screen as long as text input is the first responder
+        [_tempInput resignFirstResponder];
+    }
+    
+    [super touchesBegan:touches withEvent:event];
+}
+
+
 @end
