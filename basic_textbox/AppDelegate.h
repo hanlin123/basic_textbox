@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Lin, Han. All rights reserved.
 //
 
-//test git
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
